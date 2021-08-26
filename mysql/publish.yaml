@@ -1,0 +1,20 @@
+Type: Application
+Name: start-fc-mysql-python
+Version: 0.0.1
+Provider:
+  - 阿里云
+Description: 快速部署一个 Python 访问 mysql 的函数到阿里云函数计算。
+HomePage: https://github.com/devsapp/start-fc-db-python
+Tags:
+  - 函数计算
+  - 你好世界
+  - 新手入门
+Category: 新手入门
+Service:
+  函数计算:
+    Authorities:
+      - 创建函数
+      - 删除函数
+      - 创建服务
+      - 删除服务
+    Runtime: Python
