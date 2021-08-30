@@ -2,7 +2,6 @@
 import logging
 import pymysql
 import os
-import sys
 
 logger = logging.getLogger()
 
@@ -21,15 +20,13 @@ def getConnection():
         logger.error(e)
         logger.error(
             "ERROR: Unexpected error: Could not connect to MySql instance.")
-        sys.exit()
+        raise Exception(str(e))
 
 
 def handler(event, context):
+    conn = getConnection()
     try:
-        conn = getConnection()
         with conn.cursor() as cursor:
-            sql = "REPLACE INTO users (id, name) VALUES(%s, %s)"
-            cursor.execute(sql, ('2', 'wan'))
             cursor.execute("SELECT * FROM users")
             result = cursor.fetchone()
             logger.info(result)
