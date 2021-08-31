@@ -1,0 +1,26 @@
+edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: fcDeployApp       #  项目名称
+access: "{{ access }}"  #  秘钥别名
+
+services:
+  fc-db-lindorm-python: #  服务名称
+    component: devsapp/fc  # 组件名称
+    props: #  组件的属性值
+      region: cn-hangzhou
+      service:
+        name: fc-db-demo
+        description: 'demo for fc visit db'
+        internetAccess: true
+      function:
+        name: lindorm
+        description: visit lindorm
+        runtime: python3
+        codeUri: ./code
+        handler: index.handler
+        memorySize: 256
+        timeout: 30
+        environmentVariables:
+          DATABASE_ADDR: <your database>
+          USER: <your user>
+          PASSWORD: <your password>
+# 函数计算FC组件文档参考地址：https://github.com/devsapp/fc
