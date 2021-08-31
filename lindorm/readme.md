@@ -1,6 +1,6 @@
 # 阿里云函数计算 Python 访问 Lindorm 云数据库
 
-只需几步就可以快速在阿里云函数计算服务上体验 Python 访问 redis 数据库
+只需几步就可以快速在阿里云函数计算服务上体验 Python 访问 Lindorm 数据库
 
 - 初始化项目：`s init start-fc-lindorm-python -d start-fc-lindorm-python`
 - 进入项目：`cd start-fc-lindorm-python`
