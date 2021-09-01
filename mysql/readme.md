@@ -4,7 +4,7 @@
 
 - 初始化项目：`s init start-fc-mysql-python -d start-fc-mysql-python`
 - 进入项目：`cd start-fc-mysql-python`
-- 将 s.yaml 中的环境变量修改成您自己的值, 并将数据库操作代码改成您需要的
+- 将 s.yaml 中的环境变量和 vpc 配置修改成您自己的值, 并将代码中有关数据库操作改成您自己需要的
 - 构建项目：`s build --use-docker`
 - 部署项目：`s deploy`
 - 触发项目：`s invoke`

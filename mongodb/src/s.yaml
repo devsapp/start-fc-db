@@ -1,16 +1,21 @@
-edition: 1.0.0          #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
-name: fcDeployApp       #  项目名称
-access: "{{ access }}"  #  秘钥别名
+edition: 1.0.0          
+name: fcDeployApp       
+access: "{{ access }}"  
 
 services:
-  fc-db-mongodb-python: #  服务名称
-    component: devsapp/fc  # 组件名称
-    props: #  组件的属性值
+  fc-db-mongodb-python: 
+    component: devsapp/fc  
+    props: 
       region: cn-hangzhou
       service:
         name: fc-db-demo
         description: 'demo for fc visit db'
         internetAccess: true
+        # vpcConfig:
+        #   vpcId: xxx
+        #   securityGroupId: xxx
+        #   vswitchIds:
+        #     - vsw-xxx
       function:
         name: mongodb
         description: visit mongodb
@@ -22,4 +27,4 @@ services:
         environmentVariables:
           MONGO_DATABASE: <your mongo database>
           MONGO_URL: <your mongo url>
-# 函数计算FC组件文档参考地址：https://github.com/devsapp/fc
+# https://github.com/devsapp/fc
