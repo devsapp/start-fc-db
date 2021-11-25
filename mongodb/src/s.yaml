@@ -1,4 +1,13 @@
-edition: 1.0.0          
+# ------------------------------------
+#   欢迎您使用阿里云函数计算 FC 组件进行项目开发
+#   组件仓库地址/帮助文档：https://github.com/devsapp/fc
+#   Yaml参考文档：https://github.com/devsapp/fc/blob/main/docs/zh/yaml.md
+#   快速入门：
+#      快速创建应用：https://github.com/devsapp/fc/blob/main/docs/zh/quick_start_application.md
+#      快速使用命令：https://github.com/devsapp/fc/blob/main/docs/zh/quick_start_function.md
+# ------------------------------------
+
+edition: 1.0.0
 name: fcDeployApp       
 access: "{{ access }}"  
 
@@ -27,4 +36,3 @@ services:
         environmentVariables:
           MONGO_DATABASE: <your mongo database>
           MONGO_URL: <your mongo url>
-# https://github.com/devsapp/fc
