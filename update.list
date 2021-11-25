@@ -1,6 +1,6 @@
-./lindorm
-./mongodb
-./mysql
-./postgresql
-./redis
-./sql_server
+./python/lindorm
+./python/mongodb
+./python/mysql
+./python/postgresql
+./python/redis
+./python/sql_server
