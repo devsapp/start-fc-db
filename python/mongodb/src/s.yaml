@@ -28,7 +28,7 @@ services:
       function:
         name: mongodb
         description: visit mongodb
-        runtime: python3
+        runtime: python3.9
         codeUri: ./code
         handler: index.handler
         memorySize: 256
