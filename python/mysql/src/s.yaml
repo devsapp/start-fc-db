@@ -29,7 +29,7 @@ services:
       function:
         name: mysql
         description: visit mysql
-        runtime: python3
+        runtime: python3.9
         codeUri: ./code
         handler: index.handler
         memorySize: 256
